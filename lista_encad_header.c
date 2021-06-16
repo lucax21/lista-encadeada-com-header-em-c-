@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdbool.h>
 #include <stdlib.h>
 #include "lista_encad_header.h"
 
@@ -34,4 +35,17 @@ void libera_lista(Lista *li){
 		}
 		free(li);
 	}
+}
+
+bool insere_lista_inicio(Lista *li, struct ED_LE ed){
+	if(li == NULL) return 0;
+	Elem *no = (Elem*) malloc(sizeof(Elem));
+	if(no == NULL) return 0;
+	no->dados = ed;
+	no->prox = li->inicio;
+	if(li->inicio == NULL)
+		li->fim = no;
+	li->inicio = no;
+	li->qtd++;
+	return 1;
 }
