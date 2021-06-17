@@ -37,6 +37,7 @@ void main(){
 
 			case 2:
 				libera_lista(li);
+				li = NULL;
 				printf("Lista liberada\n");
 				break;
 

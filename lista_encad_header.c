@@ -36,6 +36,7 @@ void libera_lista(Lista *li){
 		}
 		free(li);
 	}
+	li = NULL;
 }
 
 bool insere_lista_inicio(Lista *li, struct ED_LE ed){
@@ -71,6 +72,10 @@ bool insere_lista_final(Lista *li, struct ED_LE ed){
 	li->final = no;
 	li->qtd++;
 	return 1;
+}
+
+bool insere_lista_ordenada(Lista *li, struct ED_LE ed){
+
 }
 
 bool remove_lista_inicio(Lista *li){
