@@ -99,7 +99,6 @@ bool insere_lista_ordenada(Lista *li, struct ED_LE ed){
 			while(atual != NULL && atual->dados.dado < ed.dado){
 				ant = atual;
 				atual = atual->prox;
-			printf("ant: %d no: %d\n", ant->dados.dado, no->dados.dado);
 			}
 			no->prox = ant->prox;
 			ant->prox = no;
