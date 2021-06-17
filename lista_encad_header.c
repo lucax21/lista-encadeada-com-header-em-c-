@@ -40,12 +40,16 @@ void libera_lista(Lista *li){
 
 bool insere_lista_inicio(Lista *li, struct ED_LE ed){
 	if(li == NULL) return 0;
+	
 	Elem *no = (Elem*) malloc(sizeof(Elem));
 	if(no == NULL) return 0;
+	
 	no->dados = ed;
 	no->prox = li->inicio;
+	
 	if(li->inicio == NULL)
 		li->final = no;
+	
 	li->inicio = no;
 	li->qtd++;
 	return 1;
@@ -53,14 +57,16 @@ bool insere_lista_inicio(Lista *li, struct ED_LE ed){
 
 bool insere_lista_final(Lista *li, struct ED_LE ed){
 	if(li == NULL) return 0;
+	
 	Elem *no = (Elem*) malloc(sizeof(Elem));
 	if(no == NULL) return 0;
+	
 	no->dados = ed;
 	no->prox = NULL;
 	if(li->inicio == NULL)
 		li->inicio = no;
 	else
-		li->final = no;
+		li->final->prox = no;
 	
 	li->final = no;
 	li->qtd++;

@@ -1,8 +1,9 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "lista_encad_header.h"
 
 void main(){
-	Lista *li;
+	Lista *li = NULL;
 	struct ED_LE ed;
 	short int opc;
 	int num;
@@ -13,12 +14,12 @@ void main(){
 		printf("2 - Liberar lista\n");
 		printf("3 - Inserir no inicio\n");
 		printf("4 - Inserir no final\n");
-		printf("5 - Inserir ordenado\n");
+		//printf("5 - Inserir ordenado\n");
 		printf("6 - Remove no inicio\n");
 		printf("7 - Remove no final\n");
-		printf("8 - Remove no ordenado(meio)\n");
-		printf("9 - Consulta pelo conteudo\n");
-		printf("10 - Consulta pela posicao\n");
+		//printf("8 - Remove no ordenado(meio)\n");
+	//	printf("9 - Consulta pelo conteudo\n");
+		//printf("10 - Consulta pela posicao\n");
 		printf("11 - Imprimir lista\n");
 
 		scanf("%hd", &opc);
@@ -67,7 +68,7 @@ void main(){
 				else
 					printf("Ops\n");
 				break;
-			case 6:
+		*/	case 6:
 				if(remove_lista_inicio(li))
 					printf("Sucesso ao remover no inicio da lista\n");
 				else
@@ -81,7 +82,7 @@ void main(){
 					printf("Ops\n");
 				break;
 			
-			case 8:
+		/*	case 8:
 				printf("Remover um valor escolhido.\nDigite o valor: ");
 				scanf("%d", &num);
 				printf("valor digitado %d\n", num);
