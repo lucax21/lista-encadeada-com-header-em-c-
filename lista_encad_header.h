@@ -20,4 +20,10 @@ bool remove_lista_inicio(Lista *li);
 
 bool remove_lista_final(Lista *li);
 
+bool remove_lista(Lista *li, int num);
+
+bool consulta_lista_conteudo(Lista *li, int dado, struct ED_LE *ed);
+
+bool consulta_lista_pos(Lista *li, int pos, struct ED_LE *ed);
+
 void imprime_lista(Lista *li);
